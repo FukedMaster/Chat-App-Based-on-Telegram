@@ -23,14 +23,14 @@ def generate_invite_link(length=16):
 class DiscordStyleChat:
     def __init__(self, root):
         self.root = root
-        self.root.title("Village Chat • Discord Style")
+        self.root.title("TeleApp Chat • Discord Style")
         self.root.geometry("1200x800")
         self.root.configure(bg="#36393f")
         self.root.minsize(800, 600)
         
         # Конфигурация
-        self.bot_token = "8385663546:AAEALoUAR-FlT008PB8sjWpfDCd7gai4JN4"
-        self.chat_id = "-1002960597644"
+        self.bot_token = "BOT_TOKEN_HERE"
+        self.chat_id = "GENERAL_CHAT_ID_HERE"
         self.hwid = get_hwid()
         self.username = f"User_{self.hwid}"
         self.last_update_id = 0
@@ -82,7 +82,7 @@ class DiscordStyleChat:
         self.typing_thread.daemon = True
         self.typing_thread.start()
         
-        self.display_system_message("Система", "Чат запущен! Добро пожаловать в Village Chat!")
+        self.display_system_message("Система", "Чат запущен! Добро пожаловать в TeleApp Chat!")
         self.send_presence()
         self.send_telegram_message(f"Пользователь {self.username} присоединился к чату")
     
@@ -130,7 +130,7 @@ class DiscordStyleChat:
         server_sidebar.pack_propagate(False)
         
         # Сервер иконка
-        server_icon = tk.Label(server_sidebar, text="VC", font=("Arial", 16, "bold"), 
+        server_icon = tk.Label(server_sidebar, text="TA", font=("Arial", 16, "bold"), 
                               bg=self.colors["accent"], fg="white", width=4, height=2,
                               cursor="hand2", relief="flat")
         server_icon.pack(pady=15)
@@ -155,7 +155,7 @@ class DiscordStyleChat:
         channel_header = tk.Frame(left_sidebar, bg=self.colors["header"], height=50)
         channel_header.pack(fill=tk.X)
         
-        server_name = tk.Label(channel_header, text="Village Chat", font=("Arial", 16, "bold"), 
+        server_name = tk.Label(channel_header, text="TeleApp Chat", font=("Arial", 16, "bold"), 
                 bg=self.colors["header"], fg="white")
         server_name.pack(side=tk.LEFT, padx=15)
         
@@ -796,4 +796,5 @@ class DiscordStyleChat:
 if __name__ == "__main__":
     root = tk.Tk()
     app = DiscordStyleChat(root)
+
     root.mainloop()

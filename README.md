@@ -1,5 +1,4 @@
 # Chat-App-Based-on-Telegram
-# Village Chat - Discord Style Telegram Client
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-blue)](https://core.telegram.org/bots/api)
